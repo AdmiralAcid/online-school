@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <title>Онлайн Школа - Регистрация студента</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="signup.css">
+  <script src="signup.js"></script>
+</head>
+<body>
+	<div id="background">
+		<nav id="top-header">
+			<div id="header-center">
+				<div id="menu-right">
+					<div id="menu-right-login">
+						<a class="menu-right-href" href="login.html">
+							<p>Вход</p>
+						</a>
+					</div>
+					<div id="menu-right-signup">
+						<a class="menu-right-href" href="#">
+							<p>Регистрация</p>
+						</a>
+					</div>
+				</div>
+				<div id="menu-left">
+					<div id="menu-left-logo">
+						<a href="index.html">
+							<span id="logo-left">ОНЛАЙН</span>
+							<span id="logo-mid">/</span>
+							<span id="logo-right">ШКОЛА</span>
+						</a>
+					</div>
+					<div id="menu-left-additional"></div>
+				</div>
+				<div id="menu-dummy"></div>
+			</div>
+		</nav>
+		<div id="first-background">
+			<div id="reg-box">
+				<p>Регистрация студента</p>
+				<div id="inner-reg-box">
+					<form id="stud-reg" action="registration.php" method="post" enctype="multipart/form-data">
+						<div id="form-box">
+							<div class="div-label">
+								<label for="first_name">Имя</label>
+							</div>
+							<div class="div-input">
+								<input title="Введите имя" type="text" id="first_name" name="first_name" size="24" pattern="^[А-Яа-яЁё]+$" required>
+							</div>
+							<div class="div-label">
+								<label for="second_name">Фамилия</label>
+							</div>
+							<div class="div-input">
+								<input title="Введите фамилию" type="text" id="second_name" name="second_name" size="24" required>
+							</div>
+							<div class="div-label">
+								<label for="patronymic">Отчество</label>
+							</div>
+							<div class="div-input">
+								<input title="Введите отчество" type="text" id="patronymic" name="patronymic" size="24" required>
+							</div>
+							<div class="div-label">
+								<label for="birth_date">Дата рождения</label>
+							</div>
+							<div class="div-input">
+								<input title="Введите дату рождения в заданном формате" type="text" id="birth_date" name="birth_date" size="24" placeholder="ДД.ММ.ГГГГ" maxlength="10" required>
+							</div>
+							<div class="div-label">
+								<label for="location">Населенный пункт</label>
+							</div>
+							<div class="div-input">
+								<select title="Выберите из списка место своего проживания" id="location" name="location" size="1" required>
+									<option disabled>Выберите нас.пункт</option>
+									<option value="Moscow">Москва</option>
+									<option value="Petersburg">Санкт-Петербург</option>
+								</select>
+							</div>
+							<div class="div-label">
+								<label for="school">Школа</label>
+							</div>
+							<div class="div-input">
+								<select title="Выберите из списка свою школу" id="school" name="school" size="1" required>
+									<option value="znayka">Гимназия "Знайка"</option>
+									<option value="morozko">Лицей "Морозко"</option>
+									<option value="school_11">Школа №11</option>
+								</select>
+							</div>
+							<div class="div-label">
+								<label for="photo">Фото</label>
+							</div>
+							<div class="div-input">
+								<input title="Загрузите свое фото в формате jpeg или png. Размер файла не должен превышать 2 мегабайта." type="file" id="photo" name="photo" accept="image/*,image/jpeg,image/png" required>
+							</div>
+							<div class="div-label">
+								<label for="email">Электронная почта</label>
+							</div>
+							<div class="div-input">
+								<input title="Введите адрес своей электронной почты" type="email" id="email" name="email" size="24" required>
+							</div>
+							<div class="div-label">
+								<label for="pass">Пароль</label>
+							</div>
+							<div class="div-input">
+								<input title="Придумайте пароль. Пароль может содержать только латинские буквы и цифры, а также он не должен быть длиннее 20 и короче 10 символов." type="password" id="pass" name="pass" size="24" pattern=".{10,20}" required>
+							</div>
+
+							<input type="hidden" name="MAX_FILE_SIZE" value="2097152">
+							<input type="hidden" name="formtype" value="student">
+							<div class="form-dummy"></div>
+							<div class="form-dummy"></div>
+							<input id="submit-button" type="submit" value="Зарегистрироваться" name="submit">
+							<div class="form-dummy"></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

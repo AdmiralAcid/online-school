@@ -1,0 +1,104 @@
+#background {
+	width: 100%;
+	background-image: url(./images/student.png);
+	background-size: cover;
+	height: 100vh;
+}
+
+#first-background {
+	min-width: 800px;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#reg-box {
+	padding-top: 6vh;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#reg-box p {
+	font-family: 'OpenSans';
+	font-size: 230%;
+	color: #fabb00;
+	font-weight: regular;
+}
+
+#inner-reg-box {
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 540px;
+	background-color: #fabb00;
+	background-image: linear-gradient(to bottom, #f9b82c, #faab00);
+	/*background-color: #eeeeee;
+	background-image: linear-gradient(to bottom, #eeeeee, #dddddd);*/
+	border-radius: 10px;
+}
+
+#form-box {
+	width: 510px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.div-label {
+	width: 180px;
+	float: left;
+	text-align: right;
+}
+
+.div-label label {
+	font-family: 'OpenSans';
+	font-size: 110%;
+	/*display: inline-block;*/
+	line-height: 175%;
+	color: #666;
+}
+
+.div-input {
+	padding-left: 190px;
+	margin-bottom: 8px;
+	text-align: left;
+}
+
+.div-input input {
+	font-family: 'OpenSans';
+	font-size: 110%;
+	box-shadow: none;
+	/*border: 1px solid #cccccc;*/
+}
+
+.div-input select {
+	font-family: 'OpenSans';
+	font-size: 110%;
+	/*border: 1px solid #cccccc;*/
+	width: 298px;
+}
+
+#submit-button {
+	font-family: 'OpenSans';
+	font-size: 110%;
+}
+
+.form-dummy {
+	height: 10px; 
+}
+
+/* TEMPORARY */
+#info-box {
+	margin-top: 100px;
+	width: 600px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'OpenSans';
+	font-size: 150%;
+	background-color: #fabb00;
+	background-image: linear-gradient(to bottom, #f9b82c, #faab00);
+}

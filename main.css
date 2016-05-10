@@ -1,0 +1,172 @@
+/* =============================================================== GENERAL PART 
+--------------------------------------------------------------*/
+
+html, body, h1, h2, h3, p, a {
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+
+@font-face{ 
+	font-family: 'OpenSans';
+	src: url('./fonts/OpenSans/opensans_regular/OpenSansRegular.eot');
+	src: url('./fonts/OpenSans/opensans_regular/OpenSansRegular.eot?iefix') format('eot'),
+	     url('./fonts/OpenSans/opensans_regular/OpenSansRegular.woff') format('woff'),
+	     url('./fonts/OpenSans/opensans_regular/OpenSansRegular.ttf') format('truetype'),
+	     url('./fonts/OpenSans/opensans_regular/OpenSansRegular.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{ 
+	font-family: 'OpenSans';
+	src: url('./fonts/OpenSans/opensans_bold/OpenSansBold.eot');
+	src: url('./fonts/OpenSans/opensans_bold/OpenSansBold.eot?iefix') format('eot'),
+	     url('./fonts/OpenSans/opensans_bold/OpenSansBold.woff') format('woff'),
+	     url('./fonts/OpenSans/opensans_bold/OpenSansBold.ttf') format('truetype'),
+	     url('./fonts/OpenSans/opensans_bold/OpenSansBold.svg#webfont') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{ 
+	font-family: 'OpenSans';
+	src: url('./fonts/OpenSans/opensans_italic/OpenSansItalic.eot');
+	src: url('./fonts/OpenSans/opensans_italic/OpenSansItalic.eot?iefix') format('eot'),
+	     url('./fonts/OpenSans/opensans_italic/OpenSansItalic.woff') format('woff'),
+	     url('./fonts/OpenSans/opensans_italic/OpenSansItalic.ttf') format('truetype'),
+	     url('./fonts/OpenSans/opensans_italic/OpenSansItalic.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face{ 
+	font-family: 'Bebas';
+	src: url('./fonts/Bebas/BebasNeueRegular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{ 
+	font-family: 'Bebas';
+	src: url('./fonts/Bebas/BebasNeueBold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* ================================================================= HEADER CSS 
+--------------------------------------------------------------*/ 
+
+#top-header {
+	background-color: #eeeeee;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+}
+
+#header-center {
+	height: 45px;
+	min-width: 800px;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu-left {
+	width: 320px;
+	height: 100%;
+	float: left;
+}
+
+#menu-left-logo {
+	width: 158px;
+	height: 100%;
+	float: left;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+
+#menu-left-logo a {
+	height: 100%;
+	text-decoration: none;
+	display: block;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#logo-left {
+	font-family: 'Bebas';
+	font-size: 150%;
+	font-weight: bold;
+	color: #fe9e00;
+}
+
+#logo-mid {
+	font-family: 'Bebas';
+	font-size: 150%;
+	font-weight: bold;
+	color: #000000;
+}
+
+#logo-right {
+	font-family: 'Bebas';
+	font-size: 150%;
+	color: #000000;
+}
+
+#menu-left-additional {
+	width: 160px;
+	height: 100%;
+	float: right;
+}
+
+#menu-dummy {
+	height: 100%;
+	padding-left: 300px;
+	padding-right: 200px;
+}
+
+#menu-right {
+	height: 100%;
+	width: 200px;
+	float: right;	
+}
+
+#menu-right-login {
+	width: 68px;
+	height: 100%;
+	float: left;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+
+.menu-right-href {
+	height: 100%;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font-family: 'OpenSans';
+	font-size: 100%;
+	color: #000000;
+	font-weight: regular;
+	transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-ms-transition-duration: 0.4s;
+}
+
+.menu-right-href p {
+	padding-top: 11px;
+}
+
+.menu-right-href:hover {
+	background-color: #444444;
+	color: #fabb00;
+}
+
+#menu-right-signup {
+	width: 129px;
+	height: 100%;
+	float: right;
+	border-right: 1px solid #cccccc;
+	background-color: #fabb00;
+}

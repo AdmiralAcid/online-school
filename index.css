@@ -1,0 +1,101 @@
+#background {
+	width: 100%;
+	background-image: url(./images/aurora.png);
+	background-size: cover;
+	height: 100vh;
+}
+
+#first_background {
+	min-width: 800px;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#info {
+	padding-top: 15vh;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	/*height: 700px;*/
+}
+
+#info-one {
+	font-family: 'OpenSans';
+	font-size: 250%;
+	color: #ffffff;
+	font-weight: regular;
+	margin-bottom: 15px;
+}
+
+#info-two {
+	font-family: 'Bebas';
+	font-size: 800%;
+	margin-bottom: 50px;
+}
+
+#info-two-left {
+	color: #fe9e00;
+	font-weight: bold;
+}
+
+#info-two-mid {
+	color: #000000;
+	font-weight: bold;
+}
+
+#info-two-right {
+	color: #000000;
+}
+
+#info-three {
+	font-family: 'OpenSans';
+	font-size: 150%;
+	color: #ffffff;
+	font-weight: regular;
+	width: 70%;
+	margin: 0px auto 30px auto;
+}
+
+.log-button {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font-family: 'OpenSans';
+	font-size: 120%;
+	color: #000000;
+	/*font-weight: bold;*/
+	transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-ms-transition-duration: 0.4s;
+	border-radius: 25px;
+	background-color: #fabb00;
+	background-image: linear-gradient(to bottom, #f9b82c, #faab00);
+	width: 30%;
+	height: 40px;
+	margin: 15px auto 10px auto;
+	padding-top: 10px;
+}
+
+.log-button-parents {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font-family: 'OpenSans';
+	font-size: 120%;
+	color: #000000;
+	font-weight: regular;
+	transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-ms-transition-duration: 0.4s;
+	border-radius: 25px;
+	background-color: #fabb00;
+	background-image: linear-gradient(to bottom, #00b695, #00a969);
+	width: 30%;
+	height: 40px;
+	margin: 15px auto 10px auto;
+	padding-top: 10px;
+}
