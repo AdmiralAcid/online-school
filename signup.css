@@ -32,10 +32,10 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: 540px;
-	background-color: #fabb00;
-	background-image: linear-gradient(to bottom, #f9b82c, #faab00);
-	/*background-color: #eeeeee;
-	background-image: linear-gradient(to bottom, #eeeeee, #dddddd);*/
+	/*background-color: #fabb00;
+	background-image: linear-gradient(to bottom, #f9b82c, #faab00);*/
+	background-color: #eeeeee;
+	background-image: linear-gradient(to bottom, #eeeeee, #dddddd);
 	border-radius: 10px;
 }
 

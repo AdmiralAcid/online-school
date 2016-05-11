@@ -1,4 +1,8 @@
-CREATE TABLE students (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(30), 
-	second_name VARCHAR(30), patronymic VARCHAR(20), birth_date VARCHAR(12), location VARCHAR(30), 
-	school VARCHAR(30), photo VARCHAR(30), email VARCHAR(20), pass VARCHAR(20));
+CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, login_mail VARCHAR(30) NOT NULL, password VARCHAR(40) NOT NULL)
 
+CREATE TABLE parents (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, user_id INT NOT NULL, first_name VARCHAR(30) NOT NULL, 
+	second_name VARCHAR(30) NOT NULL, patronymic VARCHAR(20), FOREIGN KEY(user_id) REFERENCES users(id))
+
+CREATE TABLE students (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, user_id INT NOT NULL, first_name VARCHAR(30) NOT NULL, 
+	second_name VARCHAR(30) NOT NULL, patronymic VARCHAR(20), birth_date VARCHAR(12) NOT NULL, location VARCHAR(30) NOT NULL, 
+	school VARCHAR(30) NOT NULL, photo VARCHAR(30) NOT NULL, parent_one INT, parent_two INT, FOREIGN KEY(user_id) REFERENCES users(id));
