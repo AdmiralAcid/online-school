@@ -20,7 +20,7 @@
 	text-align: center;
 }
 
-#reg-box p {
+#reg-box>p {
 	font-family: 'OpenSans';
 	font-size: 230%;
 	color: #fabb00;
@@ -36,15 +36,40 @@
 	background-image: linear-gradient(to bottom, #f9b82c, #faab00);*/
 	background-color: #eeeeee;
 	background-image: linear-gradient(to bottom, #eeeeee, #dddddd);
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 }
 
 #form-box {
 	width: 510px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 10px;
+	padding-top: 15px;
 	padding-bottom: 5px;
+}
+
+#form-box-image {
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#form-box-title {
+	padding-top: 20px;
+	font-family: 'OpenSans';
+	font-size: 200%;
+	text-align: center;
+}
+
+#form-box-text {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'OpenSans';
+	font-size: 120%;
+	text-align: center;
+}
+
+#form-box-text a {
+	text-decoration: none;
 }
 
 .div-label {
