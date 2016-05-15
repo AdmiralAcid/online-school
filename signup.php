@@ -10,7 +10,7 @@
 ?>
 		<div id="first-background">
 			<div id="reg-box">
-				<p>Регистрация студента</p>
+				<p>Регистрация</p>
 				<div id="inner-reg-box">				
 <?php 
 	//Check if user is logged in
@@ -52,29 +52,51 @@
     		$photo_type = $_FILES['photo']['type'];
     		$photo_size = $_FILES['photo']['size']; 
 
+    		$email_right = false;
+    		$passw_right = false;
 				$f_name_right = false;
 				$s_name_right = false;
 				$b_date_right = false;
 				$photo_right = false;
+				$errors = Array(); //описать происходящее в файле
 
-				// + email
-				// + password
+				//checking email
+				if (!empty($email) && preg_match('/^([a-zA-Z0-9@_\.]+)$/', $email)) {
+					$email_right = true;
+				} else {
+					$errors[] = 'Адрес электронной почты введен неправильно.';
+				}
+
+				//checking password
+				if (!empty($password) && preg_match('/^([a-zA-Z0-9]+)$/', $password)) {
+					$passw_right = true;
+				} else {
+					$errors[] = 'Поле пароля пустое или содержит недопустимые символы.';
+				}
 
 				//checking name
 				if (!empty($first_name) && preg_match('/^([а-яА-ЯЁё]+)$/u', $first_name)) {
 					$f_name_right = true;
+				} else {
+					$errors[] = 'Поле имени пустое или содержит недопустимые символы.';
 				}
 				if (!empty($second_name) && preg_match('/^([а-яА-ЯЁё]+)$/u', $second_name)) {
 					$s_name_right = true;
+				} else {
+					$errors[] = 'Поле фамилии пустое или содержит недопустимые символы.';
 				}
 				if (!preg_match('/^([а-яА-ЯЁё]+)$/u', $patronymic)) {
 					$patronymic = '';
 				}
+				
 				//checking time
 				$birth_date = date2sql($birth_date);
 				if ($birth_date) {
 					$b_date_right = true;
+				} else {
+					$errors[] = 'Поле даты рождения пустое или дата введена в неверном формате.';
 				}
+				
 				//checking photo
 				if (!empty($photo) && ($_FILES['photo']['type'] == 'image/png' || 
 					$_FILES['photo']['type'] == 'image/jpeg' || 
@@ -85,28 +107,50 @@
         		move_uploaded_file($_FILES['photo']['tmp_name'], $target);
         		$photo_right = true;
         	}
+				} else {
+					$errors[] = 'Фотография неподходящего формата или размера.';
 				}
 
 				//checking data integrity
-				if ($f_name_right && $s_name_right && $b_date_right && $photo_right){ //MAINCHECK
+				if (count($errors) == 0){
 					//everything is OK
 					mysqli_query($dbc, "SET NAMES 'utf8'");
 					//check if user is unique
-					$query = "SELECT FROM users WHERE login_mail = '$email'";
+					$query = "SELECT * FROM users WHERE login_mail = '$email'";
 					$data = mysqli_query($dbc, $query);
-					if (mysqli_num_rows($data) == 0) { //unite with MAINCHECK ^^^^^^
+					if (mysqli_num_rows($data) == 0) {
 						//creating new user
 						$query = "INSERT INTO users (login_mail, password, is_student) VALUES ('$email', " .
 							"SHA('$password'), 1)";
 						mysqli_query($dbc, $query) or die('error sending query to database');
-						$query = "SELECT FROM users WHERE login_mail = '$email' AND password = SHA('$password')";
-						//$query = "INSERT INTO students VALUES (0, '$first_name', '$second_name', 
-						//	'$patronymic', '$birth_date', '$location', '$school', '$photo', '$email', '$pass')";
-						//mysqli_query($dbc, $query) or die($query);
+						$query = "SELECT id FROM users WHERE login_mail = '$email' AND password = " . 
+							"SHA('$password')";
+						$data = mysqli_query($dbc, $query);
+						$row = mysqli_fetch_array($data);
+						$user_id = $row['id'];
+						$query = "INSERT INTO students (user_id, first_name, second_name, patronymic, " . 
+							"birth_date, location, school, photo) VALUES ('$user_id', '$first_name', " . 
+							"'$second_name', '$patronymic', '$birth_date', '$location', '$school', '$photo')";
+						mysqli_query($dbc, $query) or die('error sending query to database');
+						mysqli_close($dbc);
+						echo "\t\t\t\t\t<div id=\"form-box\">";
+						echo "\t\t\t\t\t\t<div id=\"form-box-image\">";
+						echo "\t\t\t\t\t\t\t<img src=\"./images/check.png\" alt=\"Successful sign up\">";
+						echo "\t\t\t\t\t\t</div>";
+						echo "\t\t\t\t\t\t<p id=\"form-box-title\">Поздравляем! :)</p>";
+						echo "\t\t\t\t\t\t<p id=\"form-box-text\">Вы успешно зарегистрированы!" . 
+							"<br><a href=\"index.php\">Вернуться на главную</a></p>";
+						echo "\t\t\t\t\t</div>";
+						echo "\t\t\t\t</div>";
+						echo "\t\t\t</div>";
+						echo "\t\t</div>";
+
+						//exit();
 					}
 					else {
-						//login is already in use error
+						//login is already in use
 						// FORM TEMPLATE IS NEEDED
+						$errors[] = "Данный адрес электронной почты уже используется";
 					}
 				}
 				else {

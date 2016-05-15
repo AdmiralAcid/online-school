@@ -1,8 +1,10 @@
 <?php
-	if (false) {
-		$right = true;
+	$email_right = false;
+	$email = 'coldcore@mail.ru';
+	if (!empty($email) && preg_match('/^([a-zA-Z0-9@_\.]+)$/', $email)) {
+		$email_right = true;
 	}
-	if ($right) {
-		echo "it's ok!";
+	if ($email_right) {
+		echo "it's OK!";
 	}
 ?>

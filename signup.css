@@ -72,6 +72,15 @@
 	text-decoration: none;
 }
 
+.error-msg {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'OpenSans';
+	font-size: 110%;
+	text-align: center;
+	color: #e06464;
+}
+
 .div-label {
 	width: 180px;
 	float: left;
