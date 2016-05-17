@@ -1,6 +1,6 @@
 <?php 
 	function date2sql($date) {
-		preg_match("/([\d]{1,2})/.([\d]{1,2})/.([\d]{2,4})", $date, $matches);
+		preg_match("/([\d]{1,2})\.([\d]{1,2})\.([\d]{2,4})/", $date, $matches);
 		return isset($matches[1]) ? fullYear($matches[3], 20) . "-" . nullBefore($matches[2]) . 
 			"-" . nullBefore($matches[1]) : FALSE;
 	}
