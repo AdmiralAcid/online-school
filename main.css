@@ -72,7 +72,7 @@ html, body, h1, h2, h3, p, a {
 }
 
 #menu-left {
-	width: 320px;
+	width: 160px;
 	height: 100%;
 	float: left;
 }
@@ -80,7 +80,6 @@ html, body, h1, h2, h3, p, a {
 #menu-left-logo {
 	width: 158px;
 	height: 100%;
-	float: left;
 	border-left: 1px solid #cccccc;
 	border-right: 1px solid #cccccc;
 }
@@ -113,30 +112,22 @@ html, body, h1, h2, h3, p, a {
 	color: #000000;
 }
 
-#menu-left-additional {
-	width: 160px;
-	height: 100%;
-	float: right;
-}
-
 #menu-dummy {
 	height: 100%;
-	padding-left: 300px;
-	padding-right: 200px;
+	padding-left: 160px;
+	padding-right: 400px;
 }
 
 #menu-right {
 	height: 100%;
-	width: 200px;
+	width: 400px;
 	float: right;	
 }
 
-#menu-right-login {
-	width: 68px;
+#menu-right-dummy {
+	width: 220px;
 	height: 100%;
 	float: left;
-	border-left: 1px solid #cccccc;
-	border-right: 1px solid #cccccc;
 }
 
 .menu-right-href {
@@ -164,9 +155,10 @@ html, body, h1, h2, h3, p, a {
 }
 
 #menu-right-signup {
-	width: 129px;
+	width: 178px;
 	height: 100%;
 	float: right;
+	border-left: 1px solid #cccccc;
 	border-right: 1px solid #cccccc;
 	background-color: #fabb00;
 }
