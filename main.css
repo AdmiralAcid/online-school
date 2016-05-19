@@ -162,3 +162,75 @@ html, body, h1, h2, h3, p, a {
 	border-right: 1px solid #cccccc;
 	background-color: #fabb00;
 }
+
+#menu-right-personified {
+	height: 100%;
+	width: 400px;
+	float: right;
+	text-align: right;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+
+#dropdown-head {
+	display: block;
+	height: 35px;
+	/*width: 373px;*/
+	padding-right: 27px;
+	padding-top: 10px;
+	font-family: 'OpenSans';
+	font-size: 100%;
+	color: #000000;
+	transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-ms-transition-duration: 0.4s;
+}
+
+#dropdown-head:hover {
+	background-color: #ffffff;
+	cursor: default;
+}
+
+#mail-part {
+	color: #888888;
+}
+
+#arrow-container {
+	float: right;
+	height: 45px;
+	width: 25px;
+	background-image: url(./images/arrow.png);
+}
+
+#action-list {
+	display: none;
+	position: absolute;
+	width: 400px;
+	/*top: 45px;*/
+	border: 1px solid #cccccc;
+	background-color: #eeeeee;
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+#action-list li a {
+	display: block;
+	text-decoration: none;
+	text-align: right;
+	font-family: 'OpenSans';
+	font-size: 100%;
+	font-weight: bold;
+	color: #000000;
+	padding: 8px 16px;
+	border-bottom: 1px solid #cccccc;
+	transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-ms-transition-duration: 0.4s;
+}
+
+#menu-right-personified ul li a:hover {
+	background-color: #ffffff;
+}

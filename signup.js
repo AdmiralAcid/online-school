@@ -1,6 +1,7 @@
-window.onload = init;
+//window.onload = init;
+addListener(window, 'load', initSignUp);
 
-function init(){
+function initSignUp(){
 	var citySelect = document.getElementById("location");
 	citySelect.onchange = handleSelectChange;
 }
