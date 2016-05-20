@@ -1,0 +1,105 @@
+#background {
+	width: 100%;
+	background-image: url(./images/desk.png);
+	background-size: cover;
+	height: 100vh;
+}
+
+#first-background {
+	min-width: 800px;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#login-box {
+	padding-top: 6vh;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#login-box>p {
+	font-family: 'OpenSans';
+	font-size: 230%;
+	color: #fabb00;
+	font-weight: regular;
+}
+
+#inner-login-box {
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	background-color: #eeeeee;
+	background-image: linear-gradient(to bottom, #eeeeee, #dddddd);
+}
+
+#login-form-box {
+	width: 470px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+.login-error-msg {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	font-family: 'OpenSans';
+	font-size: 110%;
+	text-align: center;
+	color: #e06464;
+}
+
+.div-label {
+	width: 150px;
+	float: left;
+	text-align: right;
+}
+
+.div-label label {
+	font-family: 'OpenSans';
+	font-size: 110%;
+	/*display: inline-block;*/
+	line-height: 175%;
+	color: #666;
+}
+
+.div-input {
+	padding-left: 160px;
+	margin-bottom: 8px;
+	text-align: left;
+}
+
+.div-input input {
+	font-family: 'OpenSans';
+	font-size: 110%;
+	box-shadow: none;
+}
+
+#submit-button {
+	font-family: 'OpenSans';
+	font-size: 110%;
+}
+
+.form-dummy {
+	height: 10px; 
+}
+
+.other-form-ref-container {
+	width: 470px;
+	margin: 15px auto 0px auto;
+	font-size: 100%;
+	/*margin-left: auto;
+	margin-right: auto;*/
+}
+
+.other-form-ref-container a {
+	color: #f9b82c;
+	font-family: 'OpenSans';
+	font-size: 100%;
+	font-weight: bold;
+	text-align: center;
+}

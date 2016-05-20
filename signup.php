@@ -1,6 +1,6 @@
 <?php
 	//Start the session
-	session_start();
+	require_once('session.php');
 	//setting variables for header.php
 	$page_title = 'Регистрация';
 	$page_css = 'signup.css';
@@ -14,8 +14,7 @@
 				<div id="inner-reg-box">				
 <?php 
 	//Check if user is logged in
-	if (isset($_SESSION['username']) && isset($_SESSION['user_id']) 
-		&& isset($_SESSION['is_student'])) {
+	if (isset($_SESSION['username']) && isset($_SESSION['is_student'])) {
 		//User IS logged
 		echo "\t\t\t\t\t<div id=\"form-box\">";
 		echo "\t\t\t\t\t\t<div id=\"form-box-image\">";

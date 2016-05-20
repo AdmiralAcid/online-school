@@ -76,7 +76,7 @@
 									pattern="^[a-zA-Z0-9@_\.]+$" required>
 							</div>
 							<div class="div-label">
-								<label for="pass">Пароль</label>
+								<label for="password">Пароль</label>
 							</div>
 							<div class="div-input">
 								<input title="Придумайте пароль. Пароль может содержать только латинские буквы и цифры, а также он не должен быть длиннее 20 и короче 10 символов." 
