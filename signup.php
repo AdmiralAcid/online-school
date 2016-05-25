@@ -99,7 +99,7 @@
 				}
 
 				//checking data integrity
-				if (count($errors) == 0){
+				if (count($errors) == 0) {
 					//everything is OK
 					mysqli_query($dbc, "SET NAMES 'utf8'");
 					//check if user is unique
@@ -233,6 +233,7 @@
 					//We got ERRORS
 					require_once('parent_form.php');
 				}
+				mysqli_close($dbc);
 			}
 		}
 		else {

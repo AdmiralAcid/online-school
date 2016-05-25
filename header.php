@@ -20,7 +20,9 @@
 		//well, that is a special and the complex one case
 		$username_h = mb_substr($_SESSION['username'], 0, stripos($_SESSION['username'], '@')+1);
 		echo "\t\t\t\t<div id=\"menu-right-personified\">";
-		echo "\t\t\t\t\t<div id=\"arrow-container\"></div><div id=\"dropdown-head\"><span id=\"mail-part\">" . $username_h . " </span><span id=\"name-part\">" . $_SESSION['first_name'] . " " . $_SESSION['second_name'] . "</span></div>";
+		echo "\t\t\t\t\t<div id=\"arrow-container\"></div><div id=\"dropdown-head\"><span id=\"mail-part\">" . 
+			$username_h . " </span><span id=\"name-part\">" . $_SESSION['first_name'] . " " . 
+			$_SESSION['second_name'] . "</span></div>";
 		echo "\t\t\t\t\t<ul id=\"action-list\">";
 		//student or parent
 		if ($_SESSION['is_student'] == 1) {

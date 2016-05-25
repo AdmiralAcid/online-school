@@ -1,8 +1,8 @@
 <?php
 	require_once('session.php');
 	//Check if user is logged in
-	if (isset($_SESSION['username']) && isset($_SESSION['user_id']) 
-		&& isset($_SESSION['is_student'])) {
+	if (isset($_SESSION['username']) && isset($_SESSION['first_name']) 
+		&& isset($_SESSION['second_name']) && isset($_SESSION['is_student'])) {
 		header("Location: index.php");
 	}
 	else {
@@ -39,6 +39,7 @@
 				if (mysqli_num_rows($data) == 1) {
 					//user is found
 					$user_id = $row['id'];
+					$_SESSION['user_id'] = $user_id;
 					$_SESSION['username'] = $row['login_mail'];
 					$_SESSION['is_student'] = $row['is_student'];
 
@@ -69,6 +70,7 @@
 				//we got errors
 				require_once('login_form.php');
 			}
+			mysqli_close($dbc);
 		}
 		else {
 			require_once('login_form.php');

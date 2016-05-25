@@ -1,7 +1,8 @@
 #background {
 	width: 100%;
-	background-image: url(./images/aurora.png);
+	background-image: url(./images/aurora.png);   /*can change it with javascript*/
 	background-size: cover;
+	background-color: #dddddd;
 	height: 100vh;
 }
 
@@ -98,4 +99,69 @@
 	height: 40px;
 	margin: 15px auto 10px auto;
 	padding-top: 10px;
+}
+
+/*for students index*/
+
+#p-choice {
+	width: 800px;
+	margin: 30px auto 30px auto;
+	font-family: 'OpenSans';
+	font-size: 220%;
+	font-weight: regular;
+	text-align: center;
+}
+
+#subject-container {
+	width: 800px;
+	/*max-width: 1280px;*/
+}
+
+#inner-subject-container {
+	width: 178px;
+	height: 400px;
+	background-color: #ffffff;
+	border: 1px solid #bbbbbb;
+	float: left;
+}
+
+.divider {
+	min-width: 138px;
+	max-width: 178px;
+	height: 1px;
+	background-color: #bbbbbb;
+}
+
+.p-subject {
+	width: 130px;
+	font-family: 'OpenSans';
+	font-size: 110%;
+	font-weight: regular;
+	text-align: left;
+	padding: 8px 0px 8px 8px;
+}
+
+.inner-theme-container {
+	min-width: 620px;
+	max-width: 1100px;
+	border: 1px solid #bbbbbb;
+	padding-left: 180px;
+	height: 400px;
+	/*display: none;*/
+}
+
+.para {
+	width: 220px;
+	/*temp*/height: 50px;/*temp*/
+	display: inline-block;
+	margin-right: -4px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.para a {
+	font-family: 'OpenSans';
+	font-size: 110%;
+	font-weight: regular;
+	text-decoration: none;
 }

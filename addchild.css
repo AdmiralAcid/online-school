@@ -1,0 +1,113 @@
+#background {
+	width: 100%;
+	background-image: url(./images/knowledge.png);
+	background-size: cover;
+	height: 100vh;
+}
+
+#first-background {
+	min-width: 800px;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#find-box {
+	padding-top: 6vh;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#find-box>p {
+	font-family: 'OpenSans';
+	font-size: 230%;
+	color: #fabb00;
+	font-weight: regular;
+}
+
+#inner-find-box {
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 540px;
+	background-color: #eeeeee;
+	background-image: linear-gradient(to bottom, #eeeeee, #dddddd);
+}
+
+#form-box {
+	width: 510px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+#form-box-image {
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#form-box-title {
+	padding-top: 20px;
+	font-family: 'OpenSans';
+	font-size: 200%;
+	text-align: center;
+}
+
+#form-box-text {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'OpenSans';
+	font-size: 120%;
+	text-align: center;
+}
+
+#form-box-text a {
+	text-decoration: none;
+}
+
+.error-msg {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	font-family: 'OpenSans';
+	font-size: 110%;
+	text-align: center;
+	color: #e06464;
+}
+
+.div-label {
+	width: 180px;
+	float: left;
+	text-align: right;
+}
+
+.div-label label {
+	font-family: 'OpenSans';
+	font-size: 110%;
+	line-height: 175%;
+	color: #666;
+}
+
+.div-input {
+	padding-left: 190px;
+	margin-bottom: 8px;
+	text-align: left;
+}
+
+.div-input input {
+	font-family: 'OpenSans';
+	font-size: 110%;
+	box-shadow: none;
+}
+
+#submit-button {
+	font-family: 'OpenSans';
+	font-size: 110%;
+}
+
+.form-dummy {
+	height: 10px; 
+}
