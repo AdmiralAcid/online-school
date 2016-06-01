@@ -2,7 +2,8 @@
 	width: 100%;
 	background-image: url(./images/aurora.png);   /*can change it with javascript*/
 	background-size: cover;
-	background-color: #dddddd;
+	/*background-color: #dddddd;*/
+	background-color: #ffffff;
 	height: 100vh;
 }
 
@@ -103,6 +104,10 @@
 
 /*for students index*/
 
+#student-first-background {
+	background-color: #eeeeee;
+}
+
 #p-choice {
 	width: 800px;
 	margin: 30px auto 30px auto;
@@ -113,55 +118,132 @@
 }
 
 #subject-container {
-	width: 800px;
-	/*max-width: 1280px;*/
+	min-width: 798px;
+	max-width: 1278px;
+	margin-left: auto;
+	margin-right: auto;
+	/*border-left: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;*/
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
-#inner-subject-container {
-	width: 178px;
-	height: 400px;
+.subject-row {
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 2px solid #cccccc;
+	border-radius: 5px;
+	height: 140px;
+	margin-bottom: 5px;
+}
+
+.inner-subject-container {
+	width: 170px;
+	height: 140px;
 	background-color: #ffffff;
-	border: 1px solid #bbbbbb;
+	/*border: 1px solid #bbbbbb;*/
 	float: left;
-}
-
-.divider {
-	min-width: 138px;
-	max-width: 178px;
-	height: 1px;
-	background-color: #bbbbbb;
+	border-radius: 5px 0px 0px 5px;
 }
 
 .p-subject {
-	width: 130px;
+	margin-top: 100px;
+	width: 170px;
 	font-family: 'OpenSans';
 	font-size: 110%;
 	font-weight: regular;
-	text-align: left;
-	padding: 8px 0px 8px 8px;
+	text-align: center;
+	padding: 8px 0px 8px 0px;
+	color: #ffffff;
+}
+
+#algebra {
+	background-image: url(./images/algebra.png);
+}
+
+#algebra-links>div {
+	background-color: #1b758d;
+}
+
+#geometry {
+	background-image: url(./images/geom.png);
+}
+
+#geometry-links>div {
+	background-color: #944250;
+}
+
+#physics {
+	background-image: url(./images/physics.png);
+}
+
+#physics-links>div {
+	background-color: #654073;
+}
+
+#chems {
+	background-image: url(./images/chems.png);
+}
+
+#chems-links>div {
+	background-color: #cf5145;
+}
+
+#biology {
+	background-image: url(./images/bio.png);
+}
+
+#biology-links>div {
+	background-color: #6c9958;
 }
 
 .inner-theme-container {
 	min-width: 620px;
 	max-width: 1100px;
-	border: 1px solid #bbbbbb;
-	padding-left: 180px;
-	height: 400px;
-	/*display: none;*/
+	height: 130px;
+	padding: 5px 5px 5px 175px;
 }
 
-.para {
-	width: 220px;
-	/*temp*/height: 50px;/*temp*/
+.paragraph {
+	/*height: 40px;*/
+	margin-bottom: 5px;
 	display: inline-block;
-	margin-right: -4px;
-	padding-top: 10px;
+	margin-right: 4px;
+	/*padding-top: 10px;*/
 	text-align: center;
+	border-radius: 4px;
+	background-color: #fabb00;
+	padding: 10px 8px 10px 8px; 
 }
 
-.para a {
+.paragraph a {
 	font-family: 'OpenSans';
-	font-size: 110%;
+	font-size: 90%;
 	font-weight: regular;
 	text-decoration: none;
+}
+
+.paragraph a:visited {
+
+}
+
+.paragraph:hover {
+	padding: 9px 7px 8px 7px;
+	border-top: 1px solid #52f7f5;
+	border-left: 1px solid #52f7f5;
+	border-right: 1px solid #52f7f5;
+	border-bottom: 2px solid #52f7f5;
+}
+
+.new-para {
+	color: #52f7f5;
+}
+
+.ended-para {
+	color: #a4a4a4;
+}
+
+.start-para {
+	color: #fabb00;
 }
