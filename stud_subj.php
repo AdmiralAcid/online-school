@@ -4,8 +4,13 @@
 	mysqli_query($dbc, "SET NAMES 'utf8'");
 
 	function coagulator($keyword, $dbc) {
+		//getting user id
+		$query = "SELECT id FROM users WHERE login_mail = '" . $_SESSION['username'] . "'";
+		$data = mysqli_query($dbc, $query);
+		$row = mysqli_fetch_array($data);
+		$user_id = $row['id'];
 		//getting student id
-		$query = "SELECT id FROM students WHERE user_id = '" . $_SESSION['user_id'] . "'";
+		$query = "SELECT id FROM students WHERE user_id = '" . $user_id . "'";
 		$data = mysqli_query($dbc, $query);
 		$row = mysqli_fetch_array($data);
 		$student_id = $row['id'];

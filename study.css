@@ -1,0 +1,63 @@
+#p-title {
+	min-width: 800px;
+	max-width: 1280px;
+	margin: 15px auto 15px auto;
+	font-family: 'OpenSans';
+	font-size: 200%;
+	font-weight: regular;
+	text-align: left;
+}
+
+#bicolor-background {
+	background-image: url(./images/stripe.png);
+	background-position: center;
+	min-height: 815px;
+}
+
+#work-space {
+	margin: 20px auto 0px auto;
+	min-width: 800px;
+	max-width: 1280px;
+}
+
+#status-panel {
+	width: 240px;
+	float: left;
+}
+
+#status-panel-para {
+	padding: 10px 0px 0px 5px;
+	font-family: 'OpenSans';
+	font-size: 130%;
+	font-weight: regular;
+	text-align: left;
+}
+
+#status-panel-list {
+	font-family: 'OpenSans';
+	font-size: 100%;
+	font-weight: regular;
+	list-style-type: none;
+}
+
+#status-panel-changer {
+	height: 74px;
+}
+
+.narration-button {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	background-color: red;
+	margin: 2px;
+}
+
+#study-panel {
+	padding-left: 300px;
+	background-color: #ffffff;
+}
+
+.greyline {
+	height: 1px;
+	background-color: #cccccc;
+}

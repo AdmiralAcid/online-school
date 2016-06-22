@@ -234,6 +234,7 @@
 	border-left: 1px solid #52f7f5;
 	border-right: 1px solid #52f7f5;
 	border-bottom: 2px solid #52f7f5;
+	cursor: pointer;
 }
 
 .new-para {

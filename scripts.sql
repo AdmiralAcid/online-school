@@ -21,6 +21,19 @@ CREATE TABLE theme_progress (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, student
 	NOT NULL, theme_id INT NOT NULL, theme_status VARCHAR(1));
 #s - started   e - ended   n - new
 
+CREATE TABLE chunks (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, theme_id INT NOT NULL, 
+	chunk_name VARCHAR(40) NOT NULL, order_number INT NOT NULL, link VARCHAR(20));
+
+CREATE TABLE chunk_progress (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, student_id INT 
+	NOT NULL, chunk_id INT NOT NULL, chunk_status VARCHAR(1));
+#s - started   e - ended   n - new
+
+INSERT INTO chunks (theme_id, chunk_name, order_number, link) VALUES (20, 'voltage', 1, 'voltage');
+INSERT INTO chunks (theme_id, chunk_name, order_number, link) VALUES (20, 'intensity', 2, 'intensity');
+INSERT INTO chunks (theme_id, chunk_name, order_number, link) VALUES (20, 'resistance', 3, 'resistance');
+INSERT INTO chunks (theme_id, chunk_name, order_number, link) VALUES (20, 'ohm_law', 4, 'ohm');
+INSERT INTO chunks (theme_id, chunk_name, order_number, link) VALUES (20, 'ohm_law_math', 5, 'ohm_math');
+
 INSERT INTO subjects (subject_name) VALUES ('Алгебра');
 INSERT INTO subjects (subject_name) VALUES ('Геометрия');
 INSERT INTO subjects (subject_name) VALUES ('Физика');
@@ -31,7 +44,7 @@ INSERT INTO theme_progress (student_id, theme_id, theme_status) VALUES (1, 16, '
 INSERT INTO theme_progress (student_id, theme_id, theme_status) VALUES (1, 17, 'e');
 INSERT INTO theme_progress (student_id, theme_id, theme_status) VALUES (1, 18, 'e');
 INSERT INTO theme_progress (student_id, theme_id, theme_status) VALUES (1, 19, 'e');
-INSERT INTO theme_progress (student_id, theme_id, theme_status) VALUES (1, 20, 's');
+#INSERT INTO theme_progress (student_id, theme_id, theme_status) VALUES (1, 20, 's');
 INSERT INTO theme_progress (student_id, theme_id, theme_status) VALUES (1, 21, 'n');
 INSERT INTO theme_progress (student_id, theme_id, theme_status) VALUES (1, 22, 'n');
 INSERT INTO theme_progress (student_id, theme_id, theme_status) VALUES (1, 23, 'n');

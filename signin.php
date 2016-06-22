@@ -39,7 +39,7 @@
 				if (mysqli_num_rows($data) == 1) {
 					//user is found
 					$user_id = $row['id'];
-					$_SESSION['user_id'] = $user_id;
+					//$_SESSION['user_id'] = $user_id;
 					$_SESSION['username'] = $row['login_mail'];
 					$_SESSION['is_student'] = $row['is_student'];
 
