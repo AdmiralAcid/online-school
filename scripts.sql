@@ -26,7 +26,7 @@ CREATE TABLE chunks (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, theme_id INT NO
 
 CREATE TABLE chunk_progress (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, student_id INT 
 	NOT NULL, chunk_id INT NOT NULL, chunk_status VARCHAR(1));
-#s - started   e - ended   n - new
+#e - ended   n - new
 
 INSERT INTO chunks (theme_id, chunk_name, order_number, link) VALUES (20, 'voltage', 1, 'voltage');
 INSERT INTO chunks (theme_id, chunk_name, order_number, link) VALUES (20, 'intensity', 2, 'intensity');

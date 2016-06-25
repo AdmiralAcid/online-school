@@ -3,41 +3,75 @@
 	max-width: 1280px;
 	margin: 15px auto 15px auto;
 	font-family: 'OpenSans';
-	font-size: 200%;
-	font-weight: regular;
+	font-size: 190%;
+	font-weight: bold;
 	text-align: left;
+	padding-left: 10px;
+}
+
+#p-title span {
+	color: #fe9e00;
+	padding-right: 8px;
 }
 
 #bicolor-background {
 	background-image: url(./images/stripe.png);
 	background-position: center;
 	min-height: 815px;
+	margin: 0px;
+	padding: 0px;
 }
 
 #work-space {
-	margin: 20px auto 0px auto;
+	margin: 0px auto 0px auto;
 	min-width: 800px;
 	max-width: 1280px;
 }
 
 #status-panel {
-	width: 240px;
+	width: 270px;
 	float: left;
 }
 
 #status-panel-para {
-	padding: 10px 0px 0px 5px;
+	padding: 15px 0px 10px 15px;
 	font-family: 'OpenSans';
-	font-size: 130%;
+	font-size: 180%;
 	font-weight: regular;
 	text-align: left;
 }
 
 #status-panel-list {
 	font-family: 'OpenSans';
-	font-size: 100%;
+	font-size: 120%;
 	font-weight: regular;
 	list-style-type: none;
+	padding-left: 25px;
+	margin-bottom: 40px;
+}
+
+#status-panel-list li{
+	margin-bottom: 3px;
+}
+
+#status-panel-list a {
+	text-decoration: none;
+}
+
+#status-panel-list a:hover {
+	text-decoration: underline;
+}
+
+.current_chunk {
+	color: #fe9e00;
+}
+
+.ended_chunk {
+	color: #a4a4a4;
+}
+
+.new_chunk {
+	color: #00b4ff;
 }
 
 #status-panel-changer {
@@ -45,19 +79,75 @@
 }
 
 .narration-button {
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	display: inline-block;
-	background-color: red;
 	margin: 2px;
 }
 
+.narration-button:hover {
+	border-top: 1px solid #696969;
+	border-left: 1px solid #696969;
+	border-right: 1px solid #696969;
+	border-bottom: 1px solid #696969;
+	cursor: pointer;
+}
+
+#text-button {
+	background-image: url(./images/text.png);
+}
+
+#video-button {
+	background-image: url(./images/play.png);
+}
+
+#audio-button {
+	background-image: url(./images/sound.png);
+}
+
 #study-panel {
-	padding-left: 300px;
+	padding-left: 270px;
+	background-color: #eeeeee;
+}
+
+#white-wrapper {
 	background-color: #ffffff;
+	padding: 0px 5px 15px 15px;
 }
 
 .greyline {
 	height: 1px;
 	background-color: #cccccc;
+	margin: 0px;
+	padding: 0px;
+}
+
+.usual {
+	background-color: #ffc548;
+	/*background-image: linear-gradient(to bottom, #f9b82c, #faab00);*/
+}
+
+#voltage-side-panel {
+	width: 80px;
+	float: left;
+}
+
+#voltage-content {
+	margin-left: 80px;
+	background-color: #eeeeee;
+	/*background-image: linear-gradient(to bottom, #f9f9f9, #eeeeee);*/
+	padding: 10px 30px 5px 15px;
+	font-family: 'OpenSans';
+	font-size: 110%;
+	font-weight: regular;
+}
+
+#voltage-content p {
+	margin-bottom: 5px;
+}
+
+.voltage-inner-img {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
